@@ -1,37 +1,13 @@
-# image-template
+# ucore-hci-with-nix
 
 # Purpose
 
-This repository is meant to be a template for building your own custom [bootc](https://github.com/bootc-dev/bootc) image. This template is the recommended way to make customizations to any image published by the Universal Blue Project:
-- Products: [Aurora](https://getaurora.dev/), [Bazzite](https://bazzite.gg/), [Bluefin](https://projectbluefin.io/), [uCore](https://projectucore.io/)
-- Base images: [main](https://github.com/ublue-os/main/) - the product images build on these and may be a better starting point depending on what you want. 
+I wanted uCore on my server, but I also wanted to use Nix on it. This image provides the bare necessity for Nix to install on uCore. Literally all it does is add a toplevel /nix directory.
 
-or any other base image if you want to start from scratch:
+I've only tested this with Determinate Nix, but there's no reason this shouldn't work with Lix or anything like that.
 
-- Fedora: `quay.io/fedora/fedora-bootc:41`
-- CentOS Stream 10: `quay.io/centos-bootc/centos-bootc:stream10`
+Please don't use this. I could delete this at any point, or decide I want to add more things to the base image, and you'd be screwed or mildly peeved :).
 
-This template includes a Containerfile and a Github workflow for building the container image, signing, and proper metadata to be listed on [artifacthub](https://artifacthub.io/). As soon as the workflow is enabled in your repository, it will build the container image and push it to the Github Container Registry.
-
-# Prerequisites
-
-Working knowledge in the following topics:
-
-- Containers
-  - https://www.youtube.com/watch?v=SnSH8Ht3MIc
-  - https://www.mankier.com/5/Containerfile
-- bootc
-  - https://bootc-dev.github.io/bootc/
-- Fedora Silverblue (and other Fedora Atomic variants)
-  - https://docs.fedoraproject.org/en-US/fedora-silverblue/
-- Github Workflows
-  - https://docs.github.com/en/actions/using-workflows
-
-# Video Tutorial
-
-TesterTech has made a tutorial video, check it out: 
-
-[![Video Tutorial](https://img.youtube.com/vi/IxBl11Zmq5w/0.jpg)](https://www.youtube.com/watch?v=IxBl11Zmq5wE)
 
 # How to Use
 
